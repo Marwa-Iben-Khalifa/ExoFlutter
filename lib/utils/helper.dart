@@ -1,3 +1,5 @@
+
+
 import 'package:orange_valley_caa/models/video.dart';
 
 List<Video> getFakeVideos() {
@@ -34,4 +36,22 @@ List<Video> getFakeVideos() {
             "http://orangevalleycaa.org/api/media/images/thumbs/PleinAirArtist_061873487.png",
         keywords: "air,France,French,outdoors,painting,plein,watercolor", category: '', categoryId: '', createdBy: '', cropped: '', duration: '', fileNameOriginal: '', id: '', image: '', popularity: '', videoUrl: ''),
   ];
+}
+
+// VideoSort ne permetre d'avoir qu'une des 3
+// valeurs qu'il énumére
+
+enum VideoSort {
+  id, name, duration
+  // par ex. pour savoir le nom on fera VideoSort.name
+}
+
+// ajoute de nouvelle fonctionnalité à l'énum VideoSort
+
+extension ParseEnumName on VideoSort{
+  String filterEnumName () {
+    // si on a par ex. "VideoSort.duration"
+    // on ne retourne que la partie à droite du point
+    return this.toString().split('.').last;
+  }
 }
