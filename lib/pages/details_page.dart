@@ -40,6 +40,7 @@ class _VideoDetail extends StatelessWidget {
         //--- image du haut
         _DetailsPoster(
           posterUrl: video.thumbnail,
+          videoUrl: video.videoUrl,
         ),
         //--- separation
         SizedBox(height: 20),
@@ -75,7 +76,7 @@ class _VideoDetail extends StatelessWidget {
 class _DetailsPoster extends StatelessWidget {
   final posterUrl;
   final videoUrl;
-  _DetailsPoster({this.posterUrl, this.videoUrl});
+  _DetailsPoster({required this.posterUrl,required this.videoUrl});
 
   @override
   Widget build(BuildContext context) {

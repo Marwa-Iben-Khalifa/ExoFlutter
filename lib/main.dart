@@ -8,14 +8,15 @@ void main() {
 }
 
 class  OrangeValleyApp extends StatelessWidget {
+  const OrangeValleyApp({Key? key}) : super(key: key);
+
 
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-      
     );
   }
 }
